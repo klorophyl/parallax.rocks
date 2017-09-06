@@ -1,24 +1,3 @@
-function drawOktogon(id) {
-    var canvas = document.getElementById(id);
-    var ctx = canvas.getContext("2d");
-
-    var numberOfSides = 8;
-        size = 10;
-        Xcenter = $(canvas).width() / 2;
-        Ycenter = 100;
-
-    ctx.beginPath();
-    ctx.moveTo(Xcenter +  size * Math.cos(0), Ycenter +  size *  Math.sin(0));
-
-    for (var i = 1; i <= numberOfSides; i += 1)
-    {
-        ctx.lineTo(Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
-    }
-
-    ctx.fillStyle = "black";
-    ctx.fill();
-}
-
 function drawOktogon(id, color, angle) {
     var canvas = document.getElementById(id);
     var ctx = canvas.getContext("2d");
