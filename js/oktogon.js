@@ -55,7 +55,7 @@ function rotateOktogon(id, degree, step) {
         duration: 1500
     },'swing');
 
-    timer = setTimeout(function () {
+    setTimeout(function () {
         rotateOktogon(id, degree + step, step);
     }, 2500);
 }
@@ -78,13 +78,19 @@ function blink(id) {
 }
 function blinkName() {
     blink("album-name");
-    timer = setTimeout(function () {
+    setTimeout(function () {
         blinkName();
     }, 2000);
 }
 
+function init() {
+    $("#oktogon-black").animate({"opacity": 1}, 0);
+    $("#oktogon-white").animate({"opacity": 1}, 1000, blinkName);
+    $("#album-name").animate({"opacity": 1}, 1000);
+}
+
 $(window).bind("load", function() {
-    // drawOktogon("oktogon-white");
+
     $("#oktogon-white").attr("width", 0.38 * $(window).width() + "px");
     $("#oktogon-white").attr("height", 0.38 * $(window).width() + "px");
 
@@ -96,5 +102,6 @@ $(window).bind("load", function() {
 
     rotateOktogon("oktogon-black", 0, Math.PI / 8);
     rotateOktogon("oktogon-white", 0, -Math.PI / 8);
-    blinkName();
+
+    setTimeout(init, 300);
 });

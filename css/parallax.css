@@ -7,7 +7,7 @@ html, head, body {
 
 .album-name {
     /*position: absolute;*/
-
+    opacity: 0;
     font-size: 8vw;
     text-shadow: 0px 0px 1.8vw #fff;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -27,6 +27,7 @@ html, head, body {
 
 
 .oktogon {
+    opacity: 0;
     transform-origin:center center;
     -ms-transform-origin:center center; /* IE 9 */
     -webkit-transform-origin: center center; /* Safari and Chrome */
