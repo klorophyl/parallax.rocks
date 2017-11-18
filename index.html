@@ -2,15 +2,37 @@
     <header>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
         <link rel="stylesheet" href="css/parallax.css">
+        <link rel="stylesheet" href="css/players.css">
+        <link rel="stylesheet" href="css/parallax.small.css">
+        <link rel="stylesheet" href="css/players.small.css">
+        <link rel="icon" href="img/favicon.ico" />
     </header>
 
     <body>
+        <div class="banner">
+            <img src="img/banner.png" alt="">
+        </div>
+
         <canvas id="oktogon-white" class="oktogon center"></canvas>
         <canvas id="oktogon-black" class="oktogon center"></canvas>
 
         <div id="album-name" class="album-name center">
             OKTOGON
         </div>
+
+        <div class="left">
+            <iframe id="spotify" src="https://open.spotify.com/embed/album/21vSwWpRmx84Ayph0qrhjM" width="300" height="330" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+
+        <div class="right">
+            <iframe id="deezer" scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=300&height=300&color=007FEB&layout=dark&size=medium&type=album&id=48566992&app_id=1" width="300" height="330"></iframe>
+        </div>
+
+        <div class="buttons">
+            <a href="https://www.facebook.com/parallaxtheband/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="mailto:band@parallax.rocks"><img src="img/mail.png" alt="Mail"></a>
+        </div>
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/oktogon.js"></script>

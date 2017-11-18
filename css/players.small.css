@@ -1,0 +1,16 @@
+@media screen and (max-width: 1000px) {
+    /* Players */
+    .left {
+        position: static;
+        text-align: center;
+        display: block;
+        margin-top: 30px;
+    }
+
+    .right {
+        position: static;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+}
