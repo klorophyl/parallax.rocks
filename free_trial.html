@@ -1,0 +1,15 @@
+<script type="text/javascript">
+function startFreeTrial()
+{
+  document.location = 'DeepLink://foodvisor/trial/30';
+  setTimeout( function()
+  {
+      if( confirm( 'You do not seem to have Your App installed, do you want to go download it now?'))
+      {
+        document.location = 'https://itunes.apple.com/fr/app/foodvisor-calorie-counter/id1064020872?l=en&mt=8';
+      }
+  }, 300);
+ }
+</script>
+
+<a href="#" onclick="startFreeTrial()">
