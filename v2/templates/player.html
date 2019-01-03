@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include Resource Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="/static/player/css/foundation.min.css"/>
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/player/js/foundation.min.js"></script>
+
+		<!-- Include Amplitude JS -->
+		<script type="text/javascript" src="/static/player/amplitude.min.js"></script>
+
+		<!-- Include Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="/static/player/css/app.css"/>
+  </head>
+  <body>
+    <div class="row player">
+      <div class="large-4 medium-6 small-12 large-centered medium-centered columns">
+        <div id="flat-black-player-container">
+            <div id="list-screen" class="slide-in-top">
+
+              <div id="list-screen-header" class="hide-playlist">
+                <img id="up-arrow" src="/static/player/img/up.svg"/>
+                Hide Playlist
+              </div>
+
+              <div id="list">
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+                  <span class="song-number-now-playing">
+                    <span class="number">1</span>
+                    <img class="now-playing" src="/static/player/img/now-playing.svg"/>
+                  </span>
+
+                  <div class="song-meta-container">
+                    <span class="song-name" amplitude-song-index="0">Parafeelz</span>
+                    <span class="song-artist-album"><span amplitude-song-index="0">Parallax</span> - <span amplitude-song-index="0">Moebius</span></span>
+                  </div>
+
+                  <span class="song-duration">
+                    08:05
+                  <span>
+                </div>
+
+
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
+                  <span class="song-number-now-playing">
+                    <span class="number">2</span>
+                    <img class="now-playing" src="/static/player/img/now-playing.svg"/>
+                  </span>
+
+                  <div class="song-meta-container">
+                    <span class="song-name" amplitude-song-index="1">Selfdom witch hunt</span>
+                    <span class="song-artist-album"><span amplitude-song-index="1">Parallax</span> - <span amplitude-song-index="1">Moebius</span></span>
+                  </div>
+
+                  <span class="song-duration">
+                    06:36
+                  <span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
+                  <span class="song-number-now-playing">
+                    <span class="number">3</span>
+                    <img class="now-playing" src="/static/player/img/now-playing.svg"/>
+                  </span>
+
+                  <div class="song-meta-container">
+                    <span class="song-name" amplitude-song-index="2">Paradokz</span>
+                    <span class="song-artist-album"><span amplitude-song-index="2">Parallax</span> - <span amplitude-song-index="2">Moebius</span></span>
+                  </div>
+
+                  <span class="song-duration">
+                    09:29
+                  <span>
+                </div>
+              </div>
+
+              <div id="list-screen-footer">
+                <div id="list-screen-meta-container">
+                  <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+
+                  <div class="song-artist-album">
+                    <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+                  </div>
+                </div>
+                <div class="list-controls">
+                  <div class="list-previous amplitude-prev"></div>
+                  <div class="list-play-pause amplitude-play-pause" amplitude-main-play-pause="true"></div>
+                  <div class="list-next amplitude-next"></div>
+                </div>
+              </div>
+            </div>
+            <div id="player-screen">
+              <div class="player-header down-header">
+                <img id="down" src="/static/player/img/down.svg"/>
+                Show Playlist
+              </div>
+              <div id="player-progress-bar-container">
+                <progress id="song-played-progress" class="amplitude-song-played-progress" amplitude-main-song-played-progress="true"></progress>
+                <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+              </div>
+              <div id="player-middle">
+                <div id="time-container">
+                  <span class="amplitude-current-time time-container" amplitude-main-current-time="true"></span>
+                  <span class="amplitude-duration-time time-container" amplitude-main-duration-time="true"></span>
+                </div>
+                <div id="meta-container">
+                  <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+
+                  <div class="song-artist-album">
+                    <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+                  </div>
+                </div>
+              </div>
+              <div id="player-bottom">
+                <div id="control-container">
+
+                  <div id="shuffle-container">
+                    <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+                  </div>
+
+                  <div id="prev-container">
+                    <div class="amplitude-prev" id="previous"></div>
+                  </div>
+
+                  <div id="play-pause-container">
+                    <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+                  </div>
+
+                  <div id="next-container">
+                    <div class="amplitude-next" id="next"></div>
+                  </div>
+
+                  <div id="repeat-container">
+                    <div class="amplitude-repeat" id="repeat"></div>
+                  </div>
+
+                </div>
+
+                <div id="volume-container">
+                  <img src="/static/player/img/volume.svg"/><input type="range" class="amplitude-volume-slider" step=".1"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+		Amplitude.init({
+      "bindings": {
+        37: 'prev',
+        39: 'next',
+        32: 'play_pause'
+      },
+			"songs": [
+				{
+					"name": "Parafeelz",
+					"artist": "Parallax",
+					"album": "Moebius",
+					"url": "/static/mp3/parafeelz.mp3",
+					"cover_art_url": "/static/img/moebius/artwork.jpg"
+				},
+        {
+					"name": "Selfdom witch hunt",
+					"artist": "Parallax",
+					"album": "Moebius",
+					"url": "/static/mp3/selfdom.mp3",
+					"cover_art_url": "/static/img/moebius/artwork.jpg"
+				},
+        {
+					"name": "Paradokz",
+					"artist": "Parallax",
+					"album": "Moebius",
+					"url": "/static/mp3/paradokz.mp3",
+					"cover_art_url": "/static/img/moebius/artwork.jpg"
+				}
+			]
+		});
+
+	</script>
+
+  <!--
+    Include UX functions JS
+
+    NOTE: These are for handling things outside of the scope of AmplitudeJS
+  -->
+  <script type="text/javascript" src="/static/player/js/functions.js"></script>
+</html>

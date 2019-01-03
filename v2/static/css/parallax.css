@@ -1,0 +1,127 @@
+body {
+  background: black !important;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  -ms-transform:translate(-50%, -50%); /* IE 9 */
+  -webkit-transform:translate(-50%, -50%); /* Safari and Chrome */
+  -moz-transform:translate(-50%, -50%); /* Firefox */
+  -o-transform:translate(-50%, -50%); /* Opera */
+}
+
+.loading-view {}
+
+.background {
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.6;
+  background-image: url('/static/img/moebius/background.jpg');
+  background-size: cover;
+}
+
+div#title-mask {
+  overflow: hidden;
+
+  opacity: 0.85;
+  mix-blend-mode: screen;
+
+  -webkit-mask: url(/static/img/moebius/title-white.png) no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+}
+
+div#title-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url(/static/img/moebius/title-bg.jpg);
+  background-size: cover;
+}
+
+div#ring-mask {
+  overflow: hidden;
+  -webkit-mask: url(/static/img/moebius/ring-mask.png) no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+
+  overflow: hidden;
+}
+
+div#ring-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url(/static/img/moebius/ring-bg.jpg);
+  background-size: cover;
+}
+
+.player {
+  position: absolute;
+  width: 100%;
+  bottom: 1;
+}
+
+/* ANIMATIONS */
+
+
+@-webkit-keyframes rotating-right /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating-right {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotating-left /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotating-left {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
