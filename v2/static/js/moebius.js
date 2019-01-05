@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    layout();
     $(window).resize(layout);
 
     rotate($("#ring-bg"), 200, "right");
@@ -12,6 +11,8 @@ function showMoebius(duration = 500) {
     $("#moebius-bg").fadeIn(duration);
     $("#ring-mask").delay(duration * 1.5).fadeIn(duration);
     $("#title-mask").delay(duration * 2).fadeIn(duration);
+
+    layout();
 }
 
 function hideMoebius(duration = 0) {
