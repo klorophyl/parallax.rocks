@@ -7,6 +7,20 @@ $(document).ready(function() {
     // rotate($("#ring-mask"), 300, "right");
 });
 
+function showMoebius(duration = 500) {
+    $("#moebius").show();
+    $("#moebius-bg").fadeIn(duration);
+    $("#ring-mask").delay(duration * 1.5).fadeIn(duration);
+    $("#title-mask").delay(duration * 2).fadeIn(duration);
+}
+
+function hideMoebius(duration = 0) {
+    $("#moebius").hide(duration);
+    $("#moebius-bg").fadeOut(duration);
+    $("#ring-mask").fadeOut(duration);
+    $("#title-mask").fadeOut(duration);
+}
+
 function layout() {
     const $ringMask = $("#ring-mask");
     const $titleMask = $("#title-mask");

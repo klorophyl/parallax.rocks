@@ -8,23 +8,26 @@
 
     <body>
 
-        <div class="center loading-view" style="display: none">
-          <img src="static/img/paraloading.gif" alt="">
+        <div class="loading-view">
+          <img src="static/img/paraloading.gif" class="center">
         </div>
 
-        <div class="background"></div>
-        <div>
-          <div id="ring-mask" class="center">
-            <div id="ring-bg"></div>
-          </div>
-          <div id="title-mask" class="center">
-            <div id="title-bg"></div>
-            {# <img class="center title" src="/static/img/moebius/title.png" alt=""> #}
+        <div id="moebius">
+          <div id="moebius-bg" class="background"></div>
+          <div>
+            <div id="ring-mask" class="center">
+              <div id="ring-bg"></div>
+            </div>
+            <div id="title-mask" class="center">
+              <div id="title-bg"></div>
+              {# <img class="center title" src="/static/img/moebius/title.png" alt=""> #}
+            </div>
           </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="/static/js/moebius.js"></script>
+        <script type="text/javascript" src="/static/js/parallax.js"></script>
 
         {% include "player.html" %}
     </body>
